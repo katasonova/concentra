@@ -1,8 +1,10 @@
 'use strict';
 
+import _ from 'lodash';
+
 // Converts camel case string to a sentence case
 export const formatCamelCaseString = text => {
-    return text;
+    return _.startCase(text);
 };
 
 // Handles page navigation
