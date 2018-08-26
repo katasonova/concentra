@@ -8,9 +8,14 @@ import { Input, Table } from 'antd';
 
 // Gets an object which has the count of letters
 const getLetterCount = text => {
-  let newString = text.replace(/[^a-z0-9]/, " ");
-  //return text;
+  const result = {};
+   [...text.replace( /[^a-zA-Z]/g, "")].forEach(resultIndex =>
+   result[resultIndex] ? result[resultIndex]++ : result[resultIndex] = 1);  
+  return result;
 };
+
+const exampleText = 'Lor49em ipsum d90olor sit amet';
+console.log(getLetterCount(exampleText));
 
 // Define columns
 const getColumns = (text, increment) => {
