@@ -19,6 +19,15 @@ console.log(getLetterCount(exampleText));
 
 // Define columns
 const getColumns = (text, increment) => {
+  const { Column, ColumnGroup } = Table;
+  const data = [];  
+  let dataLength = 3;    
+  for (let dataIndex = 0; dataIndex < dataLength; dataIndex++) {
+    data.push({
+        title: `${[lowerBound]} - ${[upperBound]}`,
+        dataIndex: `${[lowerBound]} - ${[upperBound]}`,
+    });
+      
   return [
     {
       title: 'Letter',
@@ -27,6 +36,8 @@ const getColumns = (text, increment) => {
     }
   ];
 };
+      
+console.log(getColumns('Lor49em ipsum d90olor sit amet'), 10);      
 
 // Build entry
 const getLetterRow = (letter, count, template) => {
